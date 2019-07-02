@@ -93,6 +93,31 @@
                        value="0" max="100"/>
             </div>
         </li>
+	<li id="navsleeptimer" data-icon="false" style="display: none;">
+            <div>
+                <label for="sleeptimer" >Sleep timer</label>
+                <select id="sleeptimer" >
+                    <option value="Off">Off</option>
+		    <!-- for testing -->
+                    <!-- option value="5" >5 s</option -->
+                    <!-- option value="60" >1 min</option -->
+                    <!-- option value="120" >2 min</option -->
+                    <!--  -->
+                    <option value="300" >5 min</option>
+                    <option value="600" >10 min</option>
+                    <option value="900" >15 min</option>
+                    <option value="1800" >30 min</option>
+                    <option value="2700" >45 min</option>
+                    <option value="3600" >1 hr</option>
+                    <option value="5400" >1.5 hr</option>
+                    <option value="7200" >2 hr</option>
+                </select>
+            </div>
+            <div id="sleeptimer_status" class="hidden">
+                Time left: <span id="sleeptimer_timeleft"></span>
+            </div>
+        </li>
+
         <li data-icon="false">
             <div class="hostInfo">
                 {% if hostname == serverIP %}
@@ -552,6 +577,7 @@
 <script type="text/javascript" src="js/library.js"></script>
 <script type="text/javascript" src="js/functionsvars.js"></script>
 <script type="text/javascript" src="js/process_ws.js"></script>
+<script type="text/javascript" src="js/sleeptimer.js"></script>
 
 <!-- use lastfm -->
 <script type="text/javascript" src="vendors/lastfm/lastfm.api.md5.js"></script>
